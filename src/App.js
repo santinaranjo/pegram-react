@@ -1,8 +1,9 @@
 import React from "react"
+import { Category } from "./components/category"
 
 const App = () => {
     return(
-        <h1>K dise lokoh</h1>
+        <Category />
     )
 }
 
