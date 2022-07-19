@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { App } from './App'
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('app')
 )
 
 root.render(
-  <h1>K dise lokoh</h1>
+  <App></App>
 )
