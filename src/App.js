@@ -1,14 +1,16 @@
 import React from "react"
 import { ListOfCategories } from "./components/ListOfCategories"
 import { GlobalStyle } from "./GlobalStyles"
-import { PhotoCard } from "./components/PhotoCard"
+import { ListOfPhotoCards } from "./components/ListOfPhotoCards"
+import { Logo } from "./components/Logo"
 
 const App = () => {
     return(
         <React.Fragment>
             <GlobalStyle />
+            <Logo />
             <ListOfCategories />
-            <PhotoCard />
+            <ListOfPhotoCards />
         </React.Fragment>
     )
 }
