@@ -1,9 +1,13 @@
 import React from "react"
-import { Category } from "./components/category"
+import { ListOfCategories } from "./components/ListOfCategories"
+import { GlobalStyle } from "./GlobalStyles"
 
 const App = () => {
     return(
-        <Category />
+        <React.Fragment>
+            <GlobalStyle />
+            <ListOfCategories />
+        </React.Fragment>
     )
 }
 
