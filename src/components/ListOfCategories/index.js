@@ -6,7 +6,7 @@ const ListOfCategories = () => {
     const [categories, setCategories] = React.useState([])
 
     useEffect(() => {
-        fetch("https://petgram-react-santinaranjo.vercel.app/categories")
+        fetch("https://petgram-server-santinaranjo-santinaranjo.vercel.app/categories")
             .then(response => response.json())
             .then(response => {
                 setCategories(response)
