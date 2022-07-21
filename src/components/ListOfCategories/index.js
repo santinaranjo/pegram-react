@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { List, Item } from "./styles"
 import { Category } from "../Category"
-import db from "../../../api/db.json"
 
 const ListOfCategories = () => {
+    const [categories, setCategories] = React.useState([])
+
+    useEffect(() => {
+        fetch("https://petgram-react-santinaranjo.vercel.app/categories")
+            .then(response => response.json())
+            .then(response => {
+                setCategories(response)
+            })
+    }, [])
     return(
         <List>
             {
-                db.categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+                categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
             }
         </List>
     )
