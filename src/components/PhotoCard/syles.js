@@ -25,13 +25,4 @@ const Img = styled.img`
     width: 100%;
 `
 
-const Button = styled.button`
-    padding-top: 8px;
-    display: flex;
-    align-items: center;
-    & svg {
-        margin: 4px;
-    }
-`
-
-export { ImgWrapper, Img, Button, Article }
+export { ImgWrapper, Img, Article }
