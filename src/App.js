@@ -10,18 +10,20 @@ const App = () => {
     const detailId = urlParams.get("detail")
     return(
         <React.Fragment>
-            <GlobalStyle />
-            <Logo />
-            {
-                detailId
-                    ? <PhotoCardWithQuery id={detailId} />
-                    : <BrowserRouter>
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/pet/:id" element={<Home />} />
-                        </Routes>
-                    </BrowserRouter>
-            }
+            <BrowserRouter>
+                <GlobalStyle />
+                <Logo />
+                {
+                    detailId
+                        ? <PhotoCardWithQuery id={detailId} />
+                        : 
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/pet/:categoryId" element={<Home />} />
+                            </Routes>
+                        
+                }
+            </BrowserRouter>
         </React.Fragment>
     )
 }

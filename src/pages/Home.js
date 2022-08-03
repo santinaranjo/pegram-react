@@ -8,7 +8,7 @@ const Home = () => {
     return(
         <React.Fragment>
             <ListOfCategories />
-            <ListOfPhotoCards categoryId={params.id} />
+            <ListOfPhotoCards categoryId={params.categoryId} />
         </React.Fragment>
     )
 }
