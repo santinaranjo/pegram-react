@@ -26,7 +26,7 @@ const App = () => {
                     <Route path="/detail/:detailId" element={<Detail />} />
                     <Route path="/favs" element={ isAuth ? <Favs/> : <NotRegisteredUser/>} />
                     <Route path="/user" element={ isAuth ? <User/> : <NotRegisteredUser/>} />
-                    <Route path="/register" element={<Register />} />
+                    <Route path="/register" element={ isAuth ? <Home /> : <Register /> } />
                 </Routes>                
                 <NavBar />
             </BrowserRouter>
