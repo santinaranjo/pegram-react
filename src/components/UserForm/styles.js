@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkRouter } from "react-router-dom";
 
 const Form = styled.form`
     padding: 16px 0;
@@ -33,10 +34,14 @@ const Section = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
     span {
         width: 80%;
         font-size: 15px;
         text-align: center;
+        a {
+            
+        }
     }
 `
 
@@ -47,5 +52,11 @@ const Image = styled.img`
     margin-top: 10px;
 `
 
-export { Form, Input, Button, Section, Image }
+const Link = styled(LinkRouter)`
+    font-weight: bold;
+    color: #0095f6;
+    text-decoration: none;
+`
+
+export { Form, Input, Button, Section, Image, Link }
 

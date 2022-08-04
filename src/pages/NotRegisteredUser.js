@@ -5,7 +5,7 @@ import { UserForm } from "../components/UserForm";
 const NotRegisteredUser = () => {
     const { activateAuth } = React.useContext(AuthContext)
     return(
-        <UserForm onSubmit={activateAuth} />
+        <UserForm onSubmit={activateAuth} buttonText="Iniciar Sesión" showRegister={true} />
     )
 }
 
