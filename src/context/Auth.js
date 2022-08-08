@@ -3,10 +3,13 @@ import React from "react";
 const AuthContext = React.createContext()
 
 const AuthProvider = (props) => {
-    const [isAuth, setIsAuth] = React.useState(false)
+    const [isAuth, setIsAuth] = React.useState(() => {
+      return window.sessionStorage.getItem("token")
+    })
 
-    const activateAuth = () => {
+    const activateAuth = (token) => {
         setIsAuth(true)
+        window.sessionStorage.setItem("token", token)
     }
 
     return (
