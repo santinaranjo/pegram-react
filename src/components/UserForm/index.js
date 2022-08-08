@@ -24,6 +24,7 @@ const UserForm = ({ disabled, error, onSubmit, buttonText, showRegister }) => {
                 <Input disabled={disabled} placeholder="Password" type="password" {...password} />
                 <Button disabled={disabled}>{buttonText}</Button>
             </Form>
+            {error && <ErrorSection><span>{error}</span></ErrorSection>}
             {
                 showRegister
                     ?   
@@ -32,7 +33,6 @@ const UserForm = ({ disabled, error, onSubmit, buttonText, showRegister }) => {
                         </Section>
                     : null
             }
-            {error && <ErrorSection><span>{error}</span></ErrorSection>}
         </React.Fragment>
     )
 }
