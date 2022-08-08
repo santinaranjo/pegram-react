@@ -1,9 +1,9 @@
 import React from "react";
 import { useInputValue } from "../../hooks/useInputValue"
-import { Form, Input, Button, Section, Image, Link } from "./styles";
+import { Form, Input, Button, Section, Image, Link, ErrorSection } from "./styles";
 import Dog from "../../assets/dog.svg"
 
-const UserForm = ({ onSubmit, buttonText, showRegister }) => {
+const UserForm = ({ disabled, error, onSubmit, buttonText, showRegister }) => {
     const email = useInputValue("")
     const password = useInputValue("")
 
@@ -19,10 +19,10 @@ const UserForm = ({ onSubmit, buttonText, showRegister }) => {
                     Inicia sesión con tu cuenta de Petgram y descubre el increible mundo de las mascotas.
                 </span>
             </Section>
-            <Form onSubmit={handleSubmit}>
-                <Input placeholder="Email" {...email} />
-                <Input placeholder="Password" type="password" {...password} />
-                <Button>{buttonText}</Button>
+            <Form disabled={disabled} onSubmit={handleSubmit}>
+                <Input disabled={disabled} placeholder="Email" {...email} />
+                <Input disabled={disabled} placeholder="Password" type="password" {...password} />
+                <Button disabled={disabled}>{buttonText}</Button>
             </Form>
             {
                 showRegister
@@ -32,6 +32,7 @@ const UserForm = ({ onSubmit, buttonText, showRegister }) => {
                         </Section>
                     : null
             }
+            {error && <ErrorSection><span>{error}</span></ErrorSection>}
         </React.Fragment>
     )
 }

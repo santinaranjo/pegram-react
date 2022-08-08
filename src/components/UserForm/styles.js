@@ -27,6 +27,9 @@ const Button = styled.button`
     display: block;
     width: 80%;
     text-align: center;
+    &[disabled] {
+        opacity: .3;
+    }
 `
 
 const Section = styled.section`
@@ -39,9 +42,6 @@ const Section = styled.section`
         width: 80%;
         font-size: 15px;
         text-align: center;
-        a {
-            
-        }
     }
 `
 
@@ -58,5 +58,19 @@ const Link = styled(LinkRouter)`
     text-decoration: none;
 `
 
-export { Form, Input, Button, Section, Image, Link }
+const ErrorSection = styled.section`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+        font-size: 15px;
+        width: 80%;
+        font-weight: bold;
+        color: crimson;
+        text-align: center;
+    }
+`
+
+export { Form, Input, Button, Section, Image, Link, ErrorSection }
 
