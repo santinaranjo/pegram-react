@@ -19,7 +19,7 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 })
 
 const client = new ApolloClient({
-  uri: 'https://petgram-server-santinaranjo-santinaranjo.vercel.app/graphql',
+  // uri: 'https://petgram-server-santinaranjo-santinaranjo.vercel.app/graphql',
   cache: new InMemoryCache(),
   link: concat(authMiddleware, httpLink)
 });
