@@ -1,7 +1,7 @@
 import React from "react";
 import { useInputValue } from "../../hooks/useInputValue"
 import { Form, Input, Button, Section, Image, Link, ErrorSection } from "./styles";
-import Dog from "../../assets/dog.svg"
+import Dog from "../../assets/dog.png"
 
 const UserForm = ({ disabled, error, onSubmit, buttonText, showRegister }) => {
     const email = useInputValue("")
