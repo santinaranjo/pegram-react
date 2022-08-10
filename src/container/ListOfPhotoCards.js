@@ -16,7 +16,7 @@ const ANIMALS_QUERY = gql`
 `
 
 const ListOfPhotoCards = ({ categoryId }) => {
-    const { data, loading, error } = useQuery(ANIMALS_QUERY, {variables: { categoryId }})
+  const { data, loading, error } = useQuery(ANIMALS_QUERY, {variables: { categoryId }})
   if (loading) return 'Loading...'
   if (error) return <pre>{error.message}</pre>
   return (

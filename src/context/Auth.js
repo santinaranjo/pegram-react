@@ -1,4 +1,5 @@
 import React from "react";
+import { useApolloClient } from "@apollo/client";
 
 const AuthContext = React.createContext()
 
@@ -12,8 +13,13 @@ const AuthProvider = (props) => {
         window.sessionStorage.setItem("token", token)
     }
 
+    const removeAuth = (token) => {
+      setIsAuth(false)
+      window.sessionStorage.removeItem("token")
+  }
+
     return (
-        <AuthContext.Provider value={{ isAuth, activateAuth }}>
+        <AuthContext.Provider value={{ isAuth, activateAuth, removeAuth }}>
           {props.children}
         </AuthContext.Provider>
       )

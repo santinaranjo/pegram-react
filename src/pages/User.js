@@ -1,8 +1,18 @@
 import React from "react";
+import { AuthContext } from "../context/Auth";
+import { SubmitButton } from "../components/SubmitButton";
+
 
 const User = () => {
+    const { removeAuth } = React.useContext(AuthContext)
+
     return(
-        <h1>User</h1>
+        <React.Fragment>
+            <h1>User</h1>
+            <SubmitButton onClick={removeAuth} >
+                Cerrar sesión
+            </SubmitButton>
+        </React.Fragment>
     )
 }
 

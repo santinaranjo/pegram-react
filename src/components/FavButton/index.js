@@ -1,6 +1,5 @@
 import React from 'react'
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'
-import { gql } from '@apollo/client'
 import { Button } from "./styles"
 
 const FavButton = ({ liked, likes, onClick }) => {

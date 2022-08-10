@@ -14,7 +14,7 @@ const GET_FAVORITES = gql`
 
 const GetFavorites = ()=> {
     const {data, loading, error} = useQuery(GET_FAVORITES, {
-        fetchPolicy: 'cache-and-network'
+        fetchPolicy: 'network-only'
     })
 
     return {data , loading, error}
